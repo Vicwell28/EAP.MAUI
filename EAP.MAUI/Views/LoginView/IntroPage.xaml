@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<baseContentPage:BaseContentPage
+    x:Class="EAP.MAUI.Views.LoginView.IntroPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:baseContentPage="clr-namespace:EAP.MAUI.Views.BaseView"
+    Title="IntroPage"
+    Shell.NavBarIsVisible="False">
+
+    <Grid RowDefinitions="80*,20*">
+        <Label
+            Grid.Row="0"
+            Grid.RowSpan="2"
+            HorizontalTextAlignment="Center"
+            Text="Intro Page"
+            VerticalTextAlignment="Center" />
+
+        <Button
+            Grid.Row="1"
+            Margin="15"
+            Padding="10"
+            Command="{Binding NextCommand}"
+            FontAttributes="Bold"
+            Text="Next"
+            VerticalOptions="Center" />
+    </Grid>
+
+</baseContentPage:BaseContentPage>

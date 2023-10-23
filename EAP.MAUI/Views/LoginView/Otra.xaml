@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Shell
+    x:Class="EAP.MAUI.Views.LoginView.Otra"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:Page="clr-namespace:EAP.MAUI.Views.LoginView"
+    Title="hOLA"
+    BackgroundColor="Coral"
+    Shell.NavBarIsVisible="True"
+    Shell.PresentationMode="Modal"
+    Shell.TitleColor="Red">
+
+    <ShellContent ContentTemplate="{DataTemplate Page:Ultima}" />
+
+</Shell> 

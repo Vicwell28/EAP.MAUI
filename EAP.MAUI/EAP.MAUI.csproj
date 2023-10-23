@@ -46,10 +46,140 @@
 
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+
+		<MauiImage Update="Resources\Images\actualizar.svg" BaseSize="256,256" Resize="true" />
+		<MauiImage Update="Resources\Images\agregar_usuario.svg" BaseSize="256,256" Resize="true" />
+		<MauiImage Update="Resources\Images\ajustes.svg" BaseSize="256,256" Resize="true" />
+		<MauiImage Update="Resources\Images\ajustes_deslizadores.svg" BaseSize="256,256" Resize="true" />
+		<MauiImage Update="Resources\Images\angulo_derecho.svg" BaseSize="256,256" Resize="true" />
+		<MauiImage Update="Resources\Images\angulo_izquierdo.svg" BaseSize="256,256" Resize="true" />
+		<MauiImage Update="Resources\Images\busqueda.svg" BaseSize="256,256" Resize="true" />
+		<MauiImage Update="Resources\Images\calendario.svg" BaseSize="256,256" Resize="true" />
+		<MauiImage Update="Resources\Images\carrito_de_compras.svg" BaseSize="256,256" Resize="true" />
+		<MauiImage Update="Resources\Images\circulo_de_usuario.svg" BaseSize="256,256" Resize="true" />
+		<MauiImage Update="Resources\Images\controlar.svg" BaseSize="256,256" Resize="true" />
+		<MauiImage Update="Resources\Images\cruz.svg" BaseSize="256,256" Resize="true" />
+		<MauiImage Update="Resources\Images\documento.svg" BaseSize="256,256" Resize="true" />
+		<MauiImage Update="Resources\Images\encuesta_cuadrada_horizontal.svg" BaseSize="256,256" Resize="true" />
+		<MauiImage Update="Resources\Images\filtrar.svg" BaseSize="256,256" Resize="true" />
+		<MauiImage Update="Resources\Images\grafico_simple.svg" BaseSize="256,256" Resize="true" />
+		<MauiImage Update="Resources\Images\hogar.svg" BaseSize="256,256" Resize="true" />
+		<MauiImage Update="Resources\Images\imagen.svg" BaseSize="256,256" Resize="true" />
+		<MauiImage Update="Resources\Images\informacion.svg" BaseSize="256,256" Resize="true" />
+		<MauiImage Update="Resources\Images\ingresar.svg" BaseSize="256,256" Resize="true" />
+		<MauiImage Update="Resources\Images\lapiz.svg" BaseSize="256,256" Resize="true" />
+		<MauiImage Update="Resources\Images\llamada_telefonica.svg" BaseSize="256,256" Resize="true" />
+		<MauiImage Update="Resources\Images\marcador.svg" BaseSize="256,256" Resize="true" />
+		<MauiImage Update="Resources\Images\mas.svg" BaseSize="256,256" Resize="true" />
+		<MauiImage Update="Resources\Images\menu_hamburguesa.svg" BaseSize="256,256" Resize="true" />
+		<MauiImage Update="Resources\Images\menu_puntos_vertical.svg" BaseSize="256,256" Resize="true" />
+		<MauiImage Update="Resources\Images\prohibicion.svg" BaseSize="256,256" Resize="true" />
+		<MauiImage Update="Resources\Images\puesta_de_sol.svg" BaseSize="256,256" Resize="true" />
+		<MauiImage Update="Resources\Images\recibo.svg" BaseSize="256,256" Resize="true" />
+		<MauiImage Update="Resources\Images\reloj_tres.svg" BaseSize="256,256" Resize="true" />
+		<MauiImage Update="Resources\Images\ruta.svg" BaseSize="256,256" Resize="true" />
+		<MauiImage Update="Resources\Images\salida.svg" BaseSize="256,256" Resize="true" />
+		<MauiImage Update="Resources\Images\sobre.svg" BaseSize="256,256" Resize="true" />
+		<MauiImage Update="Resources\Images\telefono_giratorio.svg" BaseSize="256,256" Resize="true" />
+		<MauiImage Update="Resources\Images\telefono_inteligente.svg" BaseSize="256,256" Resize="true" />
+		<MauiImage Update="Resources\Images\urna_boleta.svg" BaseSize="256,256" Resize="true" />
+		<MauiImage Update="Resources\Images\usuario.svg" BaseSize="256,256" Resize="true" />
+		<MauiImage Update="Resources\Images\vaca_alternativa.svg" BaseSize="256,256" Resize="true" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Resources\Images\actualizar.svg" />
+	  <None Remove="Resources\Images\agregar_usuario.svg" />
+	  <None Remove="Resources\Images\ajustes.svg" />
+	  <None Remove="Resources\Images\ajustes_deslizadores.svg" />
+	  <None Remove="Resources\Images\angulo_derecho.svg" />
+	  <None Remove="Resources\Images\angulo_izquierdo.svg" />
+	  <None Remove="Resources\Images\busqueda.svg" />
+	  <None Remove="Resources\Images\calendario.svg" />
+	  <None Remove="Resources\Images\carrito_de_compras.svg" />
+	  <None Remove="Resources\Images\circulo_de_usuario.svg" />
+	  <None Remove="Resources\Images\controlar.svg" />
+	  <None Remove="Resources\Images\cruz.svg" />
+	  <None Remove="Resources\Images\documento.svg" />
+	  <None Remove="Resources\Images\encuesta_cuadrada_horizontal.svg" />
+	  <None Remove="Resources\Images\filtrar.svg" />
+	  <None Remove="Resources\Images\grafico_simple.svg" />
+	  <None Remove="Resources\Images\hogar.svg" />
+	  <None Remove="Resources\Images\imagen.svg" />
+	  <None Remove="Resources\Images\informacion.svg" />
+	  <None Remove="Resources\Images\ingresar.svg" />
+	  <None Remove="Resources\Images\lapiz.svg" />
+	  <None Remove="Resources\Images\llamada_telefonica.svg" />
+	  <None Remove="Resources\Images\marcador.svg" />
+	  <None Remove="Resources\Images\mas.svg" />
+	  <None Remove="Resources\Images\menu_hamburguesa.svg" />
+	  <None Remove="Resources\Images\menu_puntos_vertical.svg" />
+	  <None Remove="Resources\Images\prohibicion.svg" />
+	  <None Remove="Resources\Images\puesta_de_sol.svg" />
+	  <None Remove="Resources\Images\recibo.svg" />
+	  <None Remove="Resources\Images\reloj_tres.svg" />
+	  <None Remove="Resources\Images\ruta.svg" />
+	  <None Remove="Resources\Images\salida.svg" />
+	  <None Remove="Resources\Images\sobre.svg" />
+	  <None Remove="Resources\Images\telefono_giratorio.svg" />
+	  <None Remove="Resources\Images\telefono_inteligente.svg" />
+	  <None Remove="Resources\Images\urna_boleta.svg" />
+	  <None Remove="Resources\Images\usuario.svg" />
+	  <None Remove="Resources\Images\vaca_alternativa.svg" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Controls\" />
+	  <Folder Include="Converters\" />
+	  <Folder Include="Exceptions\" />
+	  <Folder Include="Extensions\" />
+	  <Folder Include="Validations\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Views\AboutPage\AboutPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\HomeView\HomeView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\LinkView\LinkPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\LoginView\IntroPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\LoginView\LoginPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\LoginView\Otra.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\LoginView\RegisterPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\LoginView\SplashPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\LoginView\TempView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\LoginView\Ultima.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\ShellPages\HomePageShell.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\ShellPages\LoginPageShell.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\WelcomeView\WelcomePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 </Project>

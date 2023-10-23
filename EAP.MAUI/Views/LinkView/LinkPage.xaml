@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="EAP.MAUI.Views.LinkView.LinkPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="LinkPage">
+
+    <Grid ColumnDefinitions="*,*,*" RowDefinitions="20*,70*, 10*">
+        <Image
+            Grid.Row="0"
+            Grid.Column="1"
+            Margin="20"
+            Aspect="AspectFit"
+            Source="circulo_de_usuario.png" />
+
+        <VerticalStackLayout
+            Grid.Row="1"
+            Grid.ColumnSpan="3"
+            Padding="15"
+            Spacing="15">
+
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span
+                            FontAttributes="Bold"
+                            FontSize="20"
+                            Text="Carrera: " />
+                        <Span Text="Ingeniería en Desarrollo y Gestión de Software" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span
+                            FontAttributes="Bold"
+                            FontSize="20"
+                            Text="Nombre: " />
+                        <Span Text="Nombre del Alumno" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span
+                            FontAttributes="Bold"
+                            FontSize="20"
+                            Text="Turno: " />
+                        <Span Text="Nocturno" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span
+                            FontAttributes="Bold"
+                            FontSize="20"
+                            Text="Grupo: " />
+                        <Span Text="10º &quot;A&quot;" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span
+                            FontAttributes="Bold"
+                            FontSize="20"
+                            Text="CUPR: " />
+                        <Span Text="CUPRCUPRCUPRCUPRCU" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span
+                            FontAttributes="Bold"
+                            FontSize="20"
+                            Text="Correo: " />
+                        <Span Text="correo@gmail.com" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span
+                            FontAttributes="Bold"
+                            FontSize="20"
+                            Text="Matricula: " />
+                        <Span Text="20170045" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+
+
+
+
+        </VerticalStackLayout>
+
+        <Button
+            Grid.Row="2"
+            Grid.ColumnSpan="3"
+            Margin="10"
+            BackgroundColor="{StaticResource PrimaryColor}"
+            Clicked="Button_Clicked"
+            Text="Ir pagina"
+            VerticalOptions="Center" />
+    </Grid>
+
+</ContentPage>

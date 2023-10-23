@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Shell
+    x:Class="EAP.MAUI.Views.ShellPages.HomePageShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:aboutPage="clr-namespace:EAP.MAUI.Views.AboutPage"
+    xmlns:linkPage="clr-namespace:EAP.MAUI.Views.LinkView"
+    xmlns:viewsAbout="clr-namespace:EAP.MAUI.Views.HomeView"
+    xmlns:welcomePage="clr-namespace:EAP.MAUI.Views.WelcomeView"
+    BackgroundColor="{StaticResource BackgroundColor}"
+    Shell.BackgroundColor="{StaticResource PrimaryColor}"
+    Shell.TabBarBackgroundColor="{StaticResource PrimaryColor}"
+    Shell.TabBarTitleColor="{StaticResource White}"
+    Shell.TabBarUnselectedColor="{StaticResource Gray300}"
+    Shell.TitleColor="{StaticResource PrimaryColor}">
+
+    <Shell.FlyoutHeader>
+        <Grid BackgroundColor="{StaticResource PrimaryColor}" HeightRequest="150" />
+    </Shell.FlyoutHeader>
+
+    <Shell.FlyoutFooter>
+        <Grid
+            BackgroundColor="{StaticResource PrimaryColor}"
+            ColumnDefinitions="20*,80*"
+            HeightRequest="50">
+
+            <Image
+                Grid.Column="0"
+                Margin="10"
+                Aspect="AspectFit"
+                Source="salida.png" />
+
+            <Label
+                Grid.Column="1"
+                FontAttributes="Bold"
+                FontSize="15"
+                Text="Salir"
+                TextColor="White"
+                VerticalTextAlignment="Center" />
+            
+        </Grid>
+    </Shell.FlyoutFooter>
+
+    <FlyoutItem
+        Title="Home"
+        FlyoutDisplayOptions="AsMultipleItems"
+        Icon="vaca_alternativa.png"
+        Route="home">
+        <ShellContent
+            Title="Bienvenida"
+            ContentTemplate="{DataTemplate welcomePage:WelcomePage}"
+            Icon="documento.png" />
+        <ShellContent
+            Title="Historia"
+            ContentTemplate="{DataTemplate aboutPage:AboutPage}"
+            Icon="calendario.png" />
+        <ShellContent
+            Title="Link"
+            ContentTemplate="{DataTemplate linkPage:LinkPage}"
+            Icon="informacion.png" />
+    </FlyoutItem>
+
+</Shell>
