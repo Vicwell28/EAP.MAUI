@@ -5,6 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:aboutPage="clr-namespace:EAP.MAUI.Views.AboutPage"
     xmlns:linkPage="clr-namespace:EAP.MAUI.Views.LinkView"
+    xmlns:loginPage="clr-namespace:EAP.MAUI.Views.LoginView"
     xmlns:viewsAbout="clr-namespace:EAP.MAUI.Views.HomeView"
     xmlns:welcomePage="clr-namespace:EAP.MAUI.Views.WelcomeView"
     BackgroundColor="{StaticResource BackgroundColor}"
@@ -24,6 +25,10 @@
             ColumnDefinitions="20*,80*"
             HeightRequest="50">
 
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+            </Grid.GestureRecognizers>
+
             <Image
                 Grid.Column="0"
                 Margin="10"
@@ -37,9 +42,13 @@
                 Text="Salir"
                 TextColor="White"
                 VerticalTextAlignment="Center" />
-            
+
         </Grid>
     </Shell.FlyoutFooter>
+
+    <FlyoutItem>
+        <ShellContent ContentTemplate="{DataTemplate linkPage:NewPage1}" Route="Login" />
+    </FlyoutItem>
 
     <FlyoutItem
         Title="Home"
@@ -59,5 +68,11 @@
             ContentTemplate="{DataTemplate linkPage:LinkPage}"
             Icon="informacion.png" />
     </FlyoutItem>
+
+    <TabBar>
+        <Tab>
+            
+        </Tab>
+    </TabBar>
 
 </Shell>

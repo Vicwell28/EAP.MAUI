@@ -5,13 +5,14 @@ using EAP.MAUI.Views.BaseView;
 
 namespace EAP.MAUI.Views.LoginView
 {
-	public partial class LoginPage : BaseContentPage
+	public partial class LoginPage : ContentPage
 	{
 		LoginModel _loginModel;
 
-		public LoginPage(LoginViewModel loginViewModel, LoginModel loginModel) : base(loginViewModel) 
+		public LoginPage(LoginViewModel loginViewModel, LoginModel loginModel)
 		{
 			InitializeComponent();
+			this.BindingContext = loginViewModel;
 			_loginModel = loginModel;
 		}
 

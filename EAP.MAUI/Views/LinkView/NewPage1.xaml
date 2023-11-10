@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EAP.MAUI.Views.LinkView.NewPage1"
+             Shell.FlyoutItemIsVisible="False"
+             Shell.TabBarIsVisible="False"
+             Shell.NavBarIsVisible="False"
+             Title="NewPage1">
+    <VerticalStackLayout VerticalOptions="Center" Margin="20" Spacing="10">
+        <Entry Placeholder="Email"></Entry>
+        <Entry Placeholder="Passsword"></Entry>
+        <Button Text="Login" Clicked="Button_Clicked"></Button>
+    </VerticalStackLayout>
+</ContentPage>
