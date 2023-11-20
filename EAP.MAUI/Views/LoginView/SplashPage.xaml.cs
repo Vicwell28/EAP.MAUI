@@ -14,7 +14,7 @@ namespace EAP.MAUI.Views.LoginView
 		{
 			InitializeComponent();
 			_loginModel = loginModel;
-		}
+		}	
 
 		protected override void OnAppearing()
 		{

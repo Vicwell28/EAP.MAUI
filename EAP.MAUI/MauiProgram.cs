@@ -1,11 +1,14 @@
 ﻿using EAP.MAUI.Models;
+using EAP.MAUI.Services.ApiService;
 using EAP.MAUI.Services.Navigation;
 using EAP.MAUI.ViewModels.HomeViewModels;
 using EAP.MAUI.ViewModels.LoginViewModels;
+using EAP.MAUI.ViewModels.MovieViewModel;
 using EAP.MAUI.ViewModels.ViewModelBase;
 using EAP.MAUI.Views.BaseView;
 using EAP.MAUI.Views.HomeView;
 using EAP.MAUI.Views.LoginView;
+using EAP.MAUI.Views.MovieView;
 using Microsoft.Extensions.Logging;
 using System.Net;
 
@@ -66,6 +69,13 @@ namespace EAP.MAUI
 			mauiAppBuilder.Services.AddTransient<HomeView>();
 			mauiAppBuilder.Services.AddTransient<TempView>();
 
+			mauiAppBuilder.Services.AddTransient<MoviesListView>();
+
+			mauiAppBuilder.Services.AddSingleton<MovieView>();
+			mauiAppBuilder.Services.AddSingleton<MoviesView>();
+
+			
+
 			return mauiAppBuilder;
 		}
 		#endregion
@@ -83,7 +93,13 @@ namespace EAP.MAUI
 			mauiAppBuilder.Services.AddTransient<RegisterViewModel>();
 			mauiAppBuilder.Services.AddTransient<SplashViewModels>();
 			mauiAppBuilder.Services.AddTransient<TemViewModel>();
+
+			mauiAppBuilder.Services.AddSingleton<MoviesViewModel>();
+			mauiAppBuilder.Services.AddSingleton<MovieViewModel>();
+
 			
+
+
 
 			return mauiAppBuilder;
 		}
@@ -99,14 +115,15 @@ namespace EAP.MAUI
 			var httpClientHandler = new HttpClientHandler();
 			var httpClient = new HttpClient(httpClientHandler)
 			{
-				DefaultRequestVersion = HttpVersion.Version20,
+				DefaultRequestVersion = HttpVersion.Version30,
 				DefaultVersionPolicy = HttpVersionPolicy.RequestVersionOrLower,
-				Timeout = TimeSpan.FromMinutes(4)
+				Timeout = TimeSpan.FromMinutes(5)
 			};
 
 			// Registro de servicios.
 			mauiAppBuilder.Services.AddSingleton(httpClient);
 			mauiAppBuilder.Services.AddSingleton<INavigationService, NavigationService>();
+			mauiAppBuilder.Services.AddSingleton<IApiService, ApiService>();
 
 			return mauiAppBuilder;
 		}

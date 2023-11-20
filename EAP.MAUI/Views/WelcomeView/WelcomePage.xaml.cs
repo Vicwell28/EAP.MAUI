@@ -1,20 +1,20 @@
+using EAP.MAUI.ViewModels.WelcomeViewModel;
+
 namespace EAP.MAUI.Views.WelcomeView;
 
 public partial class WelcomePage : ContentPage
 {
-	bool isAppearingLogin = true;
-	public WelcomePage()
+	private readonly WelcomeViewModel welcomeViewModel;
+	public WelcomePage(WelcomeViewModel welcomeViewModel)
 	{
 		InitializeComponent();
+		this.welcomeViewModel = welcomeViewModel ?? throw new ArgumentNullException(nameof(welcomeViewModel));
+
+		this.BindingContext = this.welcomeViewModel;
 	}
 
-	protected override async void OnAppearing()
+	protected override void OnAppearing()
 	{
 		base.OnAppearing();
-
-		if (isAppearingLogin)
-		{
-			this.isAppearingLogin = false;
-		}
 	}
 }

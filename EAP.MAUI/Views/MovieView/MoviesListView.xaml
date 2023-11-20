@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="EAP.MAUI.Views.MovieView.MoviesListView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:EAP.MAUI.Views.MovieView"
+    Title="MoviesListView">
+
+    <RefreshView Command="{Binding RefreshViewCommand}" IsRefreshing="{Binding IsRefreshing}">
+        <CollectionView
+            ItemsSource="{Binding ObservableMovies}"
+            SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
+            SelectionChangedCommand="{Binding SelectionChangedCommand}"
+            SelectionChangedCommandParameter="{Binding SelectedItem}"
+            SelectionMode="Single">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+
+                    <Grid
+                        Padding="10"
+                        BackgroundColor="Gray"
+                        HeightRequest="350"
+                        RowDefinitions="90*, 10*"
+                        Margin="10">
+
+                        <Image
+                            Grid.Row="0"
+                            Aspect="AspectFill"
+                            Source="{Binding Imagen}" />
+                        <Label
+                            Grid.Row="1"
+                            HorizontalTextAlignment="Center"
+                            Text="{Binding Title}" 
+                            VerticalTextAlignment="Center"/>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+    </RefreshView>
+
+</ContentPage>

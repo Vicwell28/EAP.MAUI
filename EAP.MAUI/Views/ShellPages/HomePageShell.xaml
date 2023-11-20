@@ -6,6 +6,7 @@
     xmlns:aboutPage="clr-namespace:EAP.MAUI.Views.AboutPage"
     xmlns:linkPage="clr-namespace:EAP.MAUI.Views.LinkView"
     xmlns:loginPage="clr-namespace:EAP.MAUI.Views.LoginView"
+    xmlns:moviesPage="clr-namespace:EAP.MAUI.Views.MovieView"
     xmlns:viewsAbout="clr-namespace:EAP.MAUI.Views.HomeView"
     xmlns:welcomePage="clr-namespace:EAP.MAUI.Views.WelcomeView"
     BackgroundColor="{StaticResource BackgroundColor}"
@@ -57,7 +58,7 @@
         Route="home">
         <ShellContent
             Title="Bienvenida"
-            ContentTemplate="{DataTemplate welcomePage:WelcomePage}"
+            ContentTemplate="{DataTemplate moviesPage:MoviesListView}"
             Icon="documento.png" />
         <ShellContent
             Title="Historia"
@@ -70,9 +71,7 @@
     </FlyoutItem>
 
     <TabBar>
-        <Tab>
-            
-        </Tab>
+        <Tab />
     </TabBar>
 
 </Shell>

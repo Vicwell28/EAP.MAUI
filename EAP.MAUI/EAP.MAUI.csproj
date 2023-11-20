@@ -177,6 +177,15 @@
 	  <MauiXaml Update="Views\LoginView\Ultima.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\MovieView\MoviesListView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\MovieView\MoviesView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\MovieView\MovieView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\ShellPages\HomePageShell.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
