@@ -52,7 +52,6 @@ namespace EAP.MAUI.ViewModels.MovieViewModel
 		public MoviesViewModel(IApiService apiService)
 		{
 			this.apiService = apiService ?? throw new ArgumentNullException(nameof(apiService));
-
 			RefreshViewCommand = new Command(RefreshMovies);
 			SelectionChangedCommand = new Command<object>(OnSelectionChanged);
 
@@ -76,30 +75,24 @@ namespace EAP.MAUI.ViewModels.MovieViewModel
 
 		private async void RefreshMovies()
 		{
+			Log.Info("MoviesViewModel RefreshMovies"); 
+
 			IsRefreshing = true;
 
-			var response = await this.apiService.IndexAsync<ObservableCollection<Movie>>("http://192.168.1.12:8000/api/peliculas");
+			var response = await this.apiService.IndexAsync<ObservableCollection<Movie>>("http://192.168.1.6:8000/api/peliculas");
 			this.ObservableMovies = new ObservableCollection<Movie>(response.Select(movie =>
 			{
-				movie.Imagen = $"http://192.168.1.12:8000{movie.Imagen}";
+				movie.Imagen = $"http://192.168.1.6:8000{movie.Imagen}";
 				return movie;
 			}));
 
 			IsRefreshing = false;
 		}
 
-		//private async void GoDetailMovie()
-		//{
-		//	await Shell.Current.GoToAsync($"paginaDetalle?nombre={1}");
-		//}
-
 		public event PropertyChangedEventHandler PropertyChanged;
 		protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
 		{
-			this.PropertyChanged?.Invoke(
-				this,
-				new PropertyChangedEventArgs(propertyName)
-				);
+			this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 		}
 	}
 }

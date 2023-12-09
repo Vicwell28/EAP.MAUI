@@ -11,6 +11,7 @@ using EAP.MAUI.Views.LoginView;
 using EAP.MAUI.Views.MovieView;
 using Microsoft.Extensions.Logging;
 using System.Net;
+using System.Net.Http.Headers;
 
 namespace EAP.MAUI
 {
@@ -116,9 +117,13 @@ namespace EAP.MAUI
 			var httpClient = new HttpClient(httpClientHandler)
 			{
 				DefaultRequestVersion = HttpVersion.Version30,
-				DefaultVersionPolicy = HttpVersionPolicy.RequestVersionOrLower,
-				Timeout = TimeSpan.FromMinutes(5)
+				DefaultVersionPolicy = HttpVersionPolicy.RequestVersionOrHigher,
+				Timeout = TimeSpan.FromMinutes(5), 
 			};
+
+			httpClient.DefaultRequestHeaders.Accept.Clear();
+			httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
 
 			// Registro de servicios.
 			mauiAppBuilder.Services.AddSingleton(httpClient);

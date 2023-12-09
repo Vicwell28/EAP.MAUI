@@ -8,7 +8,7 @@ namespace EAP.MAUI.ViewModels.ViewModelBase
 {
 	public interface IViewModelBase
 	{
-		void OnAppearing();
+		void OnAppearing() ;
 		void OnDisappearing(); 
 	}
 }
