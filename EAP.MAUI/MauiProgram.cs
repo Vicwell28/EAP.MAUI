@@ -4,11 +4,14 @@ using EAP.MAUI.Services.Navigation;
 using EAP.MAUI.ViewModels.HomeViewModels;
 using EAP.MAUI.ViewModels.LoginViewModels;
 using EAP.MAUI.ViewModels.MovieViewModel;
+using EAP.MAUI.ViewModels.ShopViewModels;
 using EAP.MAUI.ViewModels.ViewModelBase;
 using EAP.MAUI.Views.BaseView;
 using EAP.MAUI.Views.HomeView;
 using EAP.MAUI.Views.LoginView;
 using EAP.MAUI.Views.MovieView;
+using EAP.MAUI.Views.ShellPages;
+using EAP.MAUI.Views.StorePage;
 using Microsoft.Extensions.Logging;
 using System.Net;
 using System.Net.Http.Headers;
@@ -75,7 +78,16 @@ namespace EAP.MAUI
 			mauiAppBuilder.Services.AddSingleton<MovieView>();
 			mauiAppBuilder.Services.AddSingleton<MoviesView>();
 
-			
+			mauiAppBuilder.Services.AddSingleton<HomeStorePageShell>();
+			mauiAppBuilder.Services.AddSingleton<LoginStorePageShell>();
+
+			mauiAppBuilder.Services.AddSingleton<StoreProducDetailtPage>();
+			mauiAppBuilder.Services.AddSingleton<StoreProductPage>();
+			mauiAppBuilder.Services.AddSingleton<StoreProfilePage>();
+			mauiAppBuilder.Services.AddSingleton<StorePurchasesPage>();
+			mauiAppBuilder.Services.AddSingleton<StoreSearchPage>();
+
+			mauiAppBuilder.Services.AddSingleton<ShopViewModelBase>();
 
 			return mauiAppBuilder;
 		}
@@ -98,9 +110,15 @@ namespace EAP.MAUI
 			mauiAppBuilder.Services.AddSingleton<MoviesViewModel>();
 			mauiAppBuilder.Services.AddSingleton<MovieViewModel>();
 
-			
+			mauiAppBuilder.Services.AddSingleton<HomeStoreShellViewModel>();
+			mauiAppBuilder.Services.AddSingleton<LoginStoreShellViewModel>();
+			mauiAppBuilder.Services.AddSingleton<ShopViewModelBase>();
 
-
+			mauiAppBuilder.Services.AddTransient<StoreProducDetailtViewModel>();
+			mauiAppBuilder.Services.AddTransient<StoreProductViewModel>();
+			mauiAppBuilder.Services.AddTransient<StoreProfileViewModel>();
+			mauiAppBuilder.Services.AddTransient<StorePurchasesViewModel>();
+			mauiAppBuilder.Services.AddTransient<StoreSearchViewModel>();
 
 			return mauiAppBuilder;
 		}

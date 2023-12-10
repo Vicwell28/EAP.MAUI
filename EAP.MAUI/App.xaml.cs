@@ -8,7 +8,7 @@ namespace EAP.MAUI
 		public App()
 		{
 			InitializeComponent();
-			MainPage = new HomePageShell();
+			MainPage = new HomeStorePageShell();
 		}
 
 		protected override void OnStart()

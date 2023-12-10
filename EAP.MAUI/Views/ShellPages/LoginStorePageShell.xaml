@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Shell
+    x:Class="EAP.MAUI.Views.ShellPages.LoginStorePageShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:EAP.MAUI.Views.StorePage"
+    Title="LoginStorePageShell">
+
+    <Tab>
+        <ShellContent
+            Title="Bienvenida"
+            ContentTemplate="{DataTemplate views:StoreProducDetailtPage}"
+            Icon="documento.png" />
+
+        <ShellContent
+            Title="Bienvenida"
+            ContentTemplate="{DataTemplate views:StoreProducDetailtPage}"
+            Icon="documento.png" />
+
+
+        <ShellContent
+            Title="Bienvenida"
+            ContentTemplate="{DataTemplate views:StoreProducDetailtPage}"
+            Icon="documento.png" />
+    </Tab>
+
+
+
+
+
+
+
+</Shell>
