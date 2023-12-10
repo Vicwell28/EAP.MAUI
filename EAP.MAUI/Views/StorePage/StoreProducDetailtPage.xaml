@@ -3,50 +3,91 @@
     x:Class="EAP.MAUI.Views.StorePage.StoreProducDetailtPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    Title="StoreProducDetailtPage">
+    Shell.TabBarIsVisible="False">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <x:Array x:Key="NumerosData" Type="{x:Type x:Int32}">
+                <x:Int32>1</x:Int32>
+                <x:Int32>2</x:Int32>
+                <x:Int32>3</x:Int32>
+                <x:Int32>4</x:Int32>
+                <x:Int32>5</x:Int32>
+            </x:Array>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label
+                Padding="10,10,10,0"
+                FontAttributes="Bold"
+                FontAutoScalingEnabled="True"
+                FontSize="Medium"
+                Text="{Binding SelectedProduct.Name}" />
+
+            <Label
+                Padding="10,5,10,10"
+                FontAttributes="None"
+                FontAutoScalingEnabled="True"
+                FontSize="Small"
+                Text="Descripcion del producto" />
+
+            <CollectionView ItemsLayout="HorizontalList" ItemsSource="{StaticResource NumerosData}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid
+                            Margin="10"
+                            HeightRequest="200"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            WidthRequest="340">
+                            <Image
+                                Margin="10"
+                                BackgroundColor="Black"
+                                Source="dotnet_bot.png" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Grid
+                Padding="10"
+                BackgroundColor="Red"
+                ColumnDefinitions="10*, 90*"
+                HorizontalOptions="Center"
+                RowDefinitions="50*,50*"
+                VerticalOptions="Center">
+                <Image
+                    Grid.Row="0"
+                    Grid.RowSpan="2"
+                    Grid.Column="0"
+                    HeightRequest="40"
+                    Source="dotnet_bot.png" />
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Text="Thsi product is selling fast" />
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Text="1,685 Purches in the last 3 days" />
+            </Grid>
+
+            <Label Padding="10" Text="{Binding SelectedProduct.Description}" />
+            <Label Padding="10" Text="El Producto Genérico XYZ es la solución ideal para tus necesidades diarias. Diseñado con la más alta calidad, este producto combina funcionalidad y estilo de manera excepcional. Su diseño elegante y moderno lo hace adecuado para una variedad de entornos, desde el hogar hasta la oficina." />
 
 
+            <Button
+                Margin="10,10,10,30"
+                BackgroundColor="White"
+                BorderColor="Black"
+                BorderWidth="2"
+                CornerRadius="10"
+                Text="Comprar Ahora!"
+                TextColor="Black" 
+                Command="{Binding CreateSalesOrderCommand}"/>
 
-    <!--  Contenido de la Página  -->
-    <StackLayout
-        Padding="20"
-        Spacing="20"
-        VerticalOptions="CenterAndExpand">
-
-        <!--  Logo o Imagen de la App  -->
-        <Image
-            HeightRequest="100"
-            HorizontalOptions="Center"
-            Source="logo_app.png" />
-
-        <!--  Campos de Inicio de Sesión  -->
-
-
-        <Entry Keyboard="Email" Placeholder="Correo electrónico" />
-        <Entry IsPassword="True" Placeholder="Contraseña" />
-
-        <!--  Botón de Inicio de Sesión  -->
-        <Button
-            Margin="0,10,0,0"
-            BackgroundColor="White"
-            BorderColor="Black"
-            BorderWidth="2"
-            CornerRadius="10"
-            Text="Iniciar Sesión"
-            TextColor="Black" />
-
-        <!--  Enlace para Registrarse o Recuperar Contraseña  -->
-        <Label
-            HorizontalOptions="Center"
-            Text="¿No tienes cuenta? Regístrate"
-            TextColor="Blue" />
-        <Label
-            HorizontalOptions="Center"
-            Text="Olvidé mi contraseña"
-            TextColor="Blue" />
-    </StackLayout>
-
-
-
-
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

@@ -4,33 +4,33 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:views="clr-namespace:EAP.MAUI.Views.StorePage"
-    Title="HomeStorePageShell">
+    Title="Tienda en Línea">
 
-    <Tab Title="Hola" Icon="documento.png">
+    <Tab Title="Productos" Icon="documento.png">
         <ShellContent
-            Title="Bienvenida"
-            ContentTemplate="{DataTemplate views:StoreProducDetailtPage}"
+            Title="Nuestros Productos"
+            ContentTemplate="{DataTemplate views:StoreProductPage}"
             Icon="documento.png" />
     </Tab>
 
-    <Tab Title="Hola" Icon="documento.png">
+    <Tab Title="Buscar" Icon="documento.png">
         <ShellContent
-            Title="Bienvenida"
-            ContentTemplate="{DataTemplate views:StoreProducDetailtPage}"
+            Title="Buscar Productos"
+            ContentTemplate="{DataTemplate views:StoreSearchPage}"
             Icon="documento.png" />
     </Tab>
 
-    <Tab Title="Hola" Icon="documento.png">
+    <Tab Title="Compras" Icon="documento.png">
         <ShellContent
-            Title="Bienvenida"
-            ContentTemplate="{DataTemplate views:StoreProducDetailtPage}"
+            Title="Mis Compras"
+            ContentTemplate="{DataTemplate views:StorePurchasesPage}"
             Icon="documento.png" />
     </Tab>
 
-    <Tab Title="Hola" Icon="documento.png">
+    <Tab Title="Perfil" Icon="documento.png">
         <ShellContent
-            Title="Bienvenida"
-            ContentTemplate="{DataTemplate views:StoreProducDetailtPage}"
+            Title="Mi Perfil"
+            ContentTemplate="{DataTemplate views:StoreProfilePage}"
             Icon="documento.png" />
     </Tab>
 

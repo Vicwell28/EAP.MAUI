@@ -5,10 +5,10 @@ namespace EAP.MAUI.Views.StorePage;
 public partial class StoreProfilePage : ContentPage
 {
 	public IViewModelBase ViewModelBase { get; set; }
-	public StoreProfilePage(IViewModelBase StoreProducDetailtViewModel)
+	public StoreProfilePage(StoreProfileViewModel StoreProfileViewModel)
 	{
 		InitializeComponent();
-		this.ViewModelBase = StoreProducDetailtViewModel;
+		this.ViewModelBase = StoreProfileViewModel;
 		this.BindingContext = this.ViewModelBase;
 	}
 

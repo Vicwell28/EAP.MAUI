@@ -114,7 +114,7 @@ namespace EAP.MAUI
 			mauiAppBuilder.Services.AddSingleton<LoginStoreShellViewModel>();
 			mauiAppBuilder.Services.AddSingleton<ShopViewModelBase>();
 
-			mauiAppBuilder.Services.AddTransient<StoreProducDetailtViewModel>();
+			mauiAppBuilder.Services.AddTransient<StoreProductDetailViewModel>();
 			mauiAppBuilder.Services.AddTransient<StoreProductViewModel>();
 			mauiAppBuilder.Services.AddTransient<StoreProfileViewModel>();
 			mauiAppBuilder.Services.AddTransient<StorePurchasesViewModel>();

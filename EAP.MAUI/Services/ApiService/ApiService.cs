@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Text.Json;
+using Microsoft.Maui.Controls.PlatformConfiguration;
+using System.Net.Http.Headers;
 
 namespace EAP.MAUI.Services.ApiService
 {
@@ -14,6 +16,11 @@ namespace EAP.MAUI.Services.ApiService
 		public ApiService(HttpClient httpClient)
 		{
 			_httpClient = httpClient ?? throw new ArgumentNullException(nameof(httpClient));
+		}
+
+		public void AddAuthorizationHeader(string Token)
+		{
+			_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Token);
 		}
 
 		public async Task<T> IndexAsync<T>(string uri)

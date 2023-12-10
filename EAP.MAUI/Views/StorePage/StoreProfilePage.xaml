@@ -1,12 +1,67 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="EAP.MAUI.Views.StorePage.StoreProfilePage"
-             Title="StoreProfilePage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+<ContentPage
+    x:Class="EAP.MAUI.Views.StorePage.StoreProfilePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <!--  Estilo y Layout General  -->
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="TituloEstilo" TargetType="Label">
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="Black" />
+            </Style>
+            <Style x:Key="TextoEstilo" TargetType="Label">
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="TextColor" Value="DarkGray" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <!--  Contenido de la Página  -->
+    <StackLayout Padding="20" Spacing="10">
+        <!--  Imagen de Perfil  -->
+        <Image
+            Aspect="AspectFit"
+            HeightRequest="120"
+            HorizontalOptions="Center"
+            Source="dotnet_bot.png"
+            WidthRequest="120" />
+
+        <!--  Información del Usuario  -->
+        <Label
+            HorizontalOptions="Center"
+            Style="{StaticResource TituloEstilo}"
+            Text="vicwell" />
+        <Label
+            HorizontalOptions="Center"
+            Style="{StaticResource TextoEstilo}"
+            Text="vicwell@gmail.com" />
+
+        <!--  Más detalles del perfil  -->
+        <StackLayout Spacing="5">
+            <Label Style="{StaticResource TituloEstilo}" Text="Acerca de mí:" />
+            <Label Style="{StaticResource TextoEstilo}" Text="Descripción breve del usuario..." />
+        </StackLayout>
+
+        <!--  Botones de Acción  -->
+        <Button
+            Margin="0,30,0,10"
+            BackgroundColor="White"
+            BorderColor="Black"
+            BorderWidth="2"
+            CornerRadius="10"
+            Text="Editar Perfil"
+            TextColor="Black" />
+        <Button
+            BackgroundColor="White"
+            BorderColor="Black"
+            BorderWidth="2"
+            CornerRadius="10"
+            Text="Cerrar Sesión"
+            TextColor="Black" />
+    </StackLayout>
+
+
 </ContentPage>

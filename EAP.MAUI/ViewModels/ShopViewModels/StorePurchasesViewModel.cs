@@ -1,13 +1,8 @@
 ﻿using EAP.MAUI.Helpers.LogHelper;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EAP.MAUI.ViewModels.ShopViewModels
 {
-    class StorePurchasesViewModel : ShopViewModelBase
+	public class StorePurchasesViewModel : ShopViewModelBase
 	{
 		public override void Initialize()
 		{

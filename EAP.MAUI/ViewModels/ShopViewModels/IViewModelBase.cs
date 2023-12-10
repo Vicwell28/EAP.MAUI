@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EAP.MAUI.ViewModels.ShopViewModels
+﻿namespace EAP.MAUI.ViewModels.ShopViewModels
 {
-    public interface IViewModelBase
+	public interface IViewModelBase
     {
 		/// <summary>
 		/// Suscribe a los eventos necesarios cuando el ViewModel está a punto de mostrarse.

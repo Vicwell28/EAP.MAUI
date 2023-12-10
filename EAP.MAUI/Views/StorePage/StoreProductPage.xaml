@@ -1,12 +1,174 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="EAP.MAUI.Views.StorePage.StoreProductPage"
-             Title="StoreProductPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+<ContentPage
+    x:Class="EAP.MAUI.Views.StorePage.StoreProductPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <x:Array x:Key="NumerosData" Type="{x:Type x:Int32}">
+                <x:Int32>1</x:Int32>
+                <x:Int32>2</x:Int32>
+                <x:Int32>3</x:Int32>
+                <x:Int32>4</x:Int32>
+                <x:Int32>5</x:Int32>
+                <x:Int32>6</x:Int32>
+            </x:Array>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout>
+            <Grid ColumnDefinitions="*,*,*,*" RowDefinitions="*,*,*,*">
+                <Image
+                    Grid.Row="0"
+                    Grid.RowSpan="4"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="4"
+                    BackgroundColor="Gray"
+                    HeightRequest="220"
+                    Source="dotnet_bot.png" />
+                <Label
+                    Grid.Row="2"
+                    Grid.RowSpan="2"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="3"
+                    Padding="10"
+                    FontAttributes="Bold"
+                    FontSize="22"
+                    Text="The Coachella Collection Is Here" />
+                <Button
+                    Grid.Row="3"
+                    Grid.Column="2"
+                    Grid.ColumnSpan="2"
+                    Margin="5"
+                    BackgroundColor="White"
+                    BorderColor="Black"
+                    BorderWidth="2"
+                    CornerRadius="10"
+                    Text="Comprar Ahora!"
+                    TextColor="Black" />
+            </Grid>
+
+            <Label
+                Margin="10"
+                FontAttributes="Bold"
+                FontSize="Body"
+                Text="Shop By Category" />
+
+            <CollectionView
+                Margin="0,0,0,40"
+                ItemsLayout="HorizontalList"
+                ItemsSource="{StaticResource NumerosData}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid
+                            Margin="10,0,10,0"
+                            RowDefinitions="85*,15*"
+                            WidthRequest="125">
+                            <Frame
+                                Grid.Row="0"
+                                BackgroundColor="Gray"
+                                CornerRadius="10"
+                                HeightRequest="100"
+                                WidthRequest="125" />
+                            <Image
+                                Grid.Row="0"
+                                HeightRequest="80"
+                                Source="dotnet_bot.png"
+                                WidthRequest="125" />
+                            <Label
+                                Grid.Row="1"
+                                FontAttributes="Bold"
+                                FontSize="Small"
+                                HorizontalOptions="Center"
+                                Text="Shop By Category" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Label
+                Margin="10"
+                FontAttributes="Bold"
+                FontSize="Body"
+                Text="Shop By Category" />
+
+            <CollectionView
+                Margin="0,0,0,40"
+                ItemsLayout="HorizontalList"
+                ItemsSource="{StaticResource NumerosData}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid
+                            Margin="10,0,10,0"
+                            RowDefinitions="85*,15*"
+                            WidthRequest="125">
+                            <Frame
+                                Grid.Row="0"
+                                BackgroundColor="Gray"
+                                CornerRadius="10"
+                                HeightRequest="100"
+                                WidthRequest="125" />
+                            <Image
+                                Grid.Row="0"
+                                HeightRequest="80"
+                                Source="dotnet_bot.png"
+                                WidthRequest="125" />
+                            <Label
+                                Grid.Row="1"
+                                FontAttributes="Bold"
+                                FontSize="Small"
+                                HorizontalOptions="Center"
+                                Text="Shop By Category" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Label
+                Margin="10"
+                FontAttributes="Bold"
+                FontSize="Body"
+                Text="Productos" />
+
+            <CollectionView
+                Margin="0,0,0,40"
+                ItemsLayout="HorizontalList"
+                ItemsSource="{Binding Products}"
+                SelectedItem="{Binding SelectedProduct, Mode=TwoWay}"
+                SelectionChangedCommand="{Binding SelectionChangedCommand}"
+                SelectionMode="Single">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid
+                            Margin="10,0,10,0"
+                            RowDefinitions="85*,15*"
+                            WidthRequest="125">
+                            <Frame
+                                Grid.Row="0"
+                                BackgroundColor="Gray"
+                                CornerRadius="10"
+                                HeightRequest="100"
+                                WidthRequest="125" />
+                            <Image
+                                Grid.Row="0"
+                                HeightRequest="80"
+                                Source="dotnet_bot.png"
+                                WidthRequest="125" />
+                            <Label
+                                Grid.Row="1"
+                                FontAttributes="Bold"
+                                FontSize="Small"
+                                HorizontalOptions="Center"
+                                Text="{Binding Name}" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+
 </ContentPage>

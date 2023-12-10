@@ -14,6 +14,7 @@ namespace EAP.MAUI.Services.ApiService
 		Task<T> StoreAsync<T>(string uri, T data);
 		Task<T> ShowAsync<T>(string uri, string id);
 		Task<T> UpdateAsync<T>(string uri, string id, T obj);
-		Task<T> DeleteAsync<T>(string uri, string id); 
+		Task<T> DeleteAsync<T>(string uri, string id);
+		void AddAuthorizationHeader(string Token);
 	}
 }

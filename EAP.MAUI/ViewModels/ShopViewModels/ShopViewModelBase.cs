@@ -1,15 +1,10 @@
 ﻿using EAP.MAUI.Helpers.LogHelper;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EAP.MAUI.ViewModels.ShopViewModels
 {
-    class ShopViewModelBase : INotifyPropertyChanged, IQueryAttributable, IViewModelBase
+	public class ShopViewModelBase : INotifyPropertyChanged, IQueryAttributable, IViewModelBase
     {
 		public event PropertyChangedEventHandler PropertyChanged;
 		public string Token { get; set; }

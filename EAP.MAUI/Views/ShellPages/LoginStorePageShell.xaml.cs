@@ -1,12 +1,14 @@
+using EAP.MAUI.ViewModels.ShopViewModels;
+
 namespace EAP.MAUI.Views.ShellPages;
 
-public partial class LoginStorePageShell : Shell
+public partial class LoginStorePageShell : ContentPage
 {
 	public IViewModelBase ViewModelBase { get; set; }
-	public LoginStorePageShell(IViewModelBase StoreProducDetailtViewModel)
+	public LoginStorePageShell(LoginStoreShellViewModel LoginStoreShellViewModel)
 	{
 		InitializeComponent();
-		this.ViewModelBase = StoreProducDetailtViewModel;
+		this.ViewModelBase = LoginStoreShellViewModel;
 		this.BindingContext = this.ViewModelBase;
 	}
 

@@ -5,10 +5,10 @@ namespace EAP.MAUI
 {
 	public partial class App : Application
 	{
-		public App()
+		public App(LoginStorePageShell LoginStorePageShell)
 		{
 			InitializeComponent();
-			MainPage = new HomeStorePageShell();
+			MainPage = LoginStorePageShell; 
 		}
 
 		protected override void OnStart()

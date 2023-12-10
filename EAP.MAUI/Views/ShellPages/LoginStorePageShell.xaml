@@ -1,33 +1,53 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<Shell
+<ContentPage
     x:Class="EAP.MAUI.Views.ShellPages.LoginStorePageShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:views="clr-namespace:EAP.MAUI.Views.StorePage"
-    Title="LoginStorePageShell">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
-    <Tab>
-        <ShellContent
-            Title="Bienvenida"
-            ContentTemplate="{DataTemplate views:StoreProducDetailtPage}"
-            Icon="documento.png" />
+    <!--  Contenido de la Página  -->
+    <StackLayout
+        Padding="20"
+        Spacing="20"
+        VerticalOptions="CenterAndExpand">
 
-        <ShellContent
-            Title="Bienvenida"
-            ContentTemplate="{DataTemplate views:StoreProducDetailtPage}"
-            Icon="documento.png" />
+        <!--  Logo o Imagen de la App  -->
+        <Image
+            HeightRequest="100"
+            HorizontalOptions="Center"
+            Source="dotnet_bot.png" />
+        <!--  Campos de Inicio de Sesión  -->
 
+        <Entry
+            Keyboard="Email"
+            Placeholder="Correo electrónico"
+            Text="{Binding Email}" />
+        <Entry
+            IsPassword="True"
+            Placeholder="Contraseña"
+            Text="{Binding Password}" />
 
-        <ShellContent
-            Title="Bienvenida"
-            ContentTemplate="{DataTemplate views:StoreProducDetailtPage}"
-            Icon="documento.png" />
-    </Tab>
+        <!--  Botón de Inicio de Sesión  -->
+        <Button
+            Margin="0,10,0,0"
+            BackgroundColor="White"
+            BorderColor="Black"
+            BorderWidth="2"
+            Command="{Binding LoginCommand}"
+            CornerRadius="10"
+            Text="Iniciar Sesión"
+            TextColor="Black" />
 
+        <!--  Enlace para Registrarse o Recuperar Contraseña  -->
+        <Label
+            HorizontalOptions="Center"
+            Text="¿No tienes cuenta? Regístrate"
+            TextColor="Blue" />
 
+        <Label
+            HorizontalOptions="Center"
+            Text="Olvidé mi contraseña"
+            TextColor="Blue" />
 
+    </StackLayout>
 
-
-
-
-</Shell>
+</ContentPage>
